@@ -3,10 +3,10 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
-    "./public/**/*.html",
-    "./public/style.css",
-    "./public/**/*.js",
-    "./public/assets/",
+    "./docs/**/*.html",
+    "./docs/style.css",
+    "./docs/**/*.js",
+    "./docs/assets/",
   ],
   theme: {
     screens: {
