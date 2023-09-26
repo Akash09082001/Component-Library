@@ -16,9 +16,6 @@ node_modules/
 # Ignore npm's cache
 .npm/
 
-# Ignore any compiled files
-public/
-
 # Ignore any build output
 src/
 
