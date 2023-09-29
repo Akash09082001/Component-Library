@@ -5,7 +5,7 @@ const myData = [
         cardName: 'card1',
         cardImg: '../assets/img/card-img.jpg',
     },
-    
+
 ];
 
 export default myData;
