@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
 </head>
 
 <body>
@@ -83,112 +84,106 @@
             </div>
         </section>
 
-        <section class="flex flex-col w-full backdrop-blur-sm col-span-4  overflow-y-scroll card-scroll">
-            <div id="Component" class="flex relative flex-col gap-10 w-full mx-auto">
+        <div class="flex flex-col w-full backdrop-blur-sm col-span-4  overflow-y-scroll card-scroll">
+            <div class="flex flex-col w-full">
                 <div
-                    class="flex w-full border border-gray-200 px-5 py-3 backdrop-blur-md z-10 sticky top-0 left-0 right-0">
-                    <h1 class="flex text-2xl font-bold">
+                    class="flex w-full justify-between items-center border border-gray-200 bg-white bg-opacity-25 px-5 py-3 backdrop-blur-2xl z-10 sticky top-0 left-0 right-0">
+                    <h1 class="flex w-fit text-xl font-bold">
                         Card1
                     </h1>
+                    <div class="flex w-fit">
+                        <h1 id="card-status" class="flex w-fit text-lg font-bold">Preview</h1>
+                    </div>
+                    <div class="flex gap-5 w-fit ">
+                        <button aria-label="Preview button" onclick="toggleContent('preview')"
+                            class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
+                            Preview
+                        </button>
+                        <button aria-label="HTML button" onclick="toggleContent('html')"
+                            class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
+                            HTML + Tailwind CSS
+                        </button>
+                        <button aria-label="HTML button" onclick="toggleContent('javascript')"
+                            class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
+                            Javascript
+                        </button>
+    
+                    </div>
                 </div>
                 <div class="flex w-full">
-                    <div class="flex flex-col gap-5 px-5 w-full mx-auto">
-                        <div class="grid grid-cols-1  gap-10 w-full mx-auto">
-                            <div class="flex gap-5 w-full ">
-                                <button aria-label="Preview button" onclick="toggleContent('preview')"
-                                    class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
-                                    Preview
-                                </button>
-                                <button aria-label="HTML button" onclick="toggleContent('html')"
-                                    class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
-                                    HTML + Tailwind CSS
-                                </button>
-                                <button aria-label="HTML button" onclick="toggleContent('javascript')"
-                                    class="btn flex w-fit py-2 px-5 bg-indigo-400 text-white rounded-md ">
-                                    Javascript
-                                </button>
-
-                            </div>
+                    <div class="flex flex-col gap-5  w-full mx-auto">
+                        <div class="grid grid-cols-1 gap-10 w-full mx-auto">
                             <div class="flex w-full">
-                                <div id="previewContent" class="flex flex-col gap-5 w-full border border-gray-200 rounded-md py-5 px-5"
+                                <div id="previewContent"
+                                    class="flex flex-col gap-5 w-full max-h-[605px] h-screen border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="Preview content">
-                                    <div class="flex w-full">
-                                        <h1 class="flex w-full text-lg font-bold">Preview</h1>
-                                    </div>
-                                    <div class="flex h-full py-20 items-center justify-center bg-black">
-                                        <div class="flex h-auto w-80 overflow-hidden" id="image-container">
-                                          <img src="https://img.freepik.com/free-photo/colleagues-making-business-plan-meeting_176420-5103.jpg?t=st=1694589480~exp=1694590080~hmac=8246fe79fe0f53697b1615d603d6446961866b905a18d0d794620c3db9e077f8" alt="" class="rounded-6 h-full w-full object-contain" />
+                                    <div class="flex h-full w-full py-20 items-center justify-center bg-black rounded-md">
+                                        <div class="flex h-auto w-80 overflow-hidden " id="image-container">
+                                            <img src="https://img.freepik.com/free-photo/colleagues-making-business-plan-meeting_176420-5103.jpg?t=st=1694589480~exp=1694590080~hmac=8246fe79fe0f53697b1615d603d6446961866b905a18d0d794620c3db9e077f8"
+                                                alt="" class="rounded-md h-full w-full object-contain" />
                                         </div>
-                                      </div>
-                                      
+                                    </div>
                                 </div>
                                 <div id="htmlContent"
-                                    class="hidden flex-col gap-5 w-full border border-gray-200 rounded-md py-5 px-5"
+                                    class="hidden flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="HTML content">
-                                    <div class="flex w-full">
-                                        <h1 class="flex w-full text-lg font-bold">HTML + Tailwind CSS Code</h1>
-                                    </div>
-                                    <div class="flex w-full">
+                                    <div class="flex h-full w-full">
                                         <pre class="flex w-full">
-                                            <code class="card-scroll rounded-md py-5 flex w-full overflow-x-scroll">
-&lt;div class=&quot;flex h-screen items-center justify-center bg-black&quot;&gt;
-  &lt;div class=&quot;flex h-auto w-80 overflow-hidden&quot; id=&quot;image-container&quot;&gt;
-    &lt;img src=&quot;https://img.freepik.com/free-photo/colleagues-making-business-plan-meeting_176420-5103.jpg?t=st=1694589480~exp=1694590080~hmac=8246fe79fe0f53697b1615d603d6446961866b905a18d0d794620c3db9e077f8&quot; alt=&quot;&quot; class=&quot;rounded-6 h-full w-full object-contain&quot; /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-                                            </code>
-                                          </pre>
+                                                <code class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
+    &lt;div class=&quot;flex h-screen items-center justify-center bg-black&quot;&gt;
+      &lt;div class=&quot;flex h-auto w-80 overflow-hidden&quot; id=&quot;image-container&quot;&gt;
+        &lt;img src=&quot;https://img.freepik.com/free-photo/colleagues-making-business-plan-meeting_176420-5103.jpg?t=st=1694589480~exp=1694590080~hmac=8246fe79fe0f53697b1615d603d6446961866b905a18d0d794620c3db9e077f8&quot; alt=&quot;&quot; class=&quot;rounded-6 h-full w-full object-contain&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;                                                
+                                                </code>
+                                              </pre>
                                     </div>
                                 </div>
                                 <div id="javascriptContent"
-                                    class="hidden flex-col gap-5 w-full border border-gray-200 rounded-md py-5 px-5"
+                                    class="hidden flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="Javascript content">
-                                    <div class="flex w-full">
-                                        <h1 class="flex w-full text-lg font-bold">Javascript Code</h1>
-                                    </div>
-                                    <div class="flex w-full">
+                                    <div class="flex w-full overflow-scroll card-scroll1">
                                         <pre class="flex w-full">
-                                            <code class="card-scroll rounded-md py-5 flex w-full overflow-x-scroll">
-
-window.onload = function () {
-  const imageContainer = document.getElementById('image-container');
-  const images = [
-    'https://img.freepik.com/free-photo/close-up-young-business-person-doing-internship_23-2149305365.jpg?t=st=1694589480~exp=1694590080~hmac=f3b5b001d27934e5de9413268e553f26c48816287a1392d1e5c87c5a5bf4dabb',
-    'https://img.freepik.com/free-photo/high-angle-people-working-with-laptop_23-2149636255.jpg?t=st=1694589480~exp=1694590080~hmac=047e5a971632be6effdd67d63d2f69e3affd1deda6a4c841884a4511c058227b',
-    'https://img.freepik.com/free-photo/african-american-man-working-open-air-man-suit-sunglasses-with-beard-using-laptop-sitting-terrace-rooftops-working-manager-technology-concept_74855-25538.jpg?t=st=1694589480~exp=1694590080~hmac=15ea10c37e4eaaf2936bc43affaf0b0eb32949b060ebd9742cf3d33473b919f8'
-  ]; // Add your image file paths here
-  let currentImageIndex = 0;
-
-  function changeImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    const newImageSrc = images[currentImageIndex];
-    const imageElement = imageContainer.querySelector('img');
-
-    imageElement.style.opacity = 0;
-
-    imageElement.src = newImageSrc;
-
-    function fadeIn() {
-      let opacity = 0;
-      const fadeInInterval = setInterval(() => {
-        opacity += 0.05;
-        imageElement.style.opacity = opacity.toFixed(2);
-        if (opacity >= 1) {
-          clearInterval(fadeInInterval);
+                                                <code class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
+    window.onload = function () {
+      const imageContainer = document.getElementById("image-container");
+      const imageElement = imageContainer.querySelector("img");
+    
+      const images = [
+        "https://img.freepik.com/free-photo/close-up-young-business-person-doing-internship_23-2149305365.jpg?t=st=1694589480~exp=1694590080~hmac=f3b5b001d27934e5de9413268e553f26c48816287a1392d1e5c87c5a5bf4dabb",
+        "https://img.freepik.com/free-photo/high-angle-people-working-with-laptop_23-2149636255.jpg?t=st=1694589480~exp=1694590080~hmac=047e5a971632be6effdd67d63d2f69e3affd1deda6a4c841884a4511c058227b",
+        "https://img.freepik.com/free-photo/african-american-man-working-open-air-man-suit-sunglasses-with-beard-using-laptop-sitting-terrace-rooftops-working-manager-technology-concept_74855-25538.jpg?t=st=1694589480~exp=1694590080~hmac=15ea10c37e4eaaf2936bc43affaf0b0eb32949b060ebd9742cf3d33473b919f8",
+      ]; 
+      let currentImageIndex = 0;
+    
+      function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        const newImageSrc = images[currentImageIndex];
+    
+        // Corrected usage of imageElement
+        imageElement.style.opacity = 0;
+        imageElement.src = newImageSrc;     
+    
+        function fadeIn() {
+          let opacity = 0;
+          const fadeInInterval = setInterval(() => {
+            opacity += 0.5;
+            imageElement.style.opacity = opacity.toFixed(1);
+            if (opacity >= 1) {
+              clearInterval(fadeInInterval);
+            }
+          }, 50);
         }
-      }, 50);
-    }
-    setTimeout(fadeIn, 100);
-  }
-
-  setTimeout(() => {
-    setInterval(changeImage, 4000);
-  }, 1000);
-};
-
-
-                                            </code>
-                                          </pre>
+        setTimeout(fadeIn, 50);
+      }
+    
+      setTimeout(() => {
+        setInterval(changeImage, 4000);
+      }, 1000);
+    };
+    
+                                                </code>
+                                              </pre>
                                     </div>
                                 </div>
                             </div>
@@ -196,43 +191,44 @@ window.onload = function () {
                     </div>
                 </div>
             </div>
-        </section>
+            
+        </div>
+        
 
 
 
     </main>
 
-
     <script>
         window.onload = function () {
             const imageContainer = document.getElementById('image-container');
+            const imageElement = imageContainer.querySelector('img');  
+
             const images = [
                 'https://img.freepik.com/free-photo/close-up-young-business-person-doing-internship_23-2149305365.jpg?t=st=1694589480~exp=1694590080~hmac=f3b5b001d27934e5de9413268e553f26c48816287a1392d1e5c87c5a5bf4dabb',
                 'https://img.freepik.com/free-photo/high-angle-people-working-with-laptop_23-2149636255.jpg?t=st=1694589480~exp=1694590080~hmac=047e5a971632be6effdd67d63d2f69e3affd1deda6a4c841884a4511c058227b',
                 'https://img.freepik.com/free-photo/african-american-man-working-open-air-man-suit-sunglasses-with-beard-using-laptop-sitting-terrace-rooftops-working-manager-technology-concept_74855-25538.jpg?t=st=1694589480~exp=1694590080~hmac=15ea10c37e4eaaf2936bc43affaf0b0eb32949b060ebd9742cf3d33473b919f8'
-            ]; // Add your image file paths here
+            ];
             let currentImageIndex = 0;
 
             function changeImage() {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 const newImageSrc = images[currentImageIndex];
-                const imageElement = imageContainer.querySelector('img');
 
                 imageElement.style.opacity = 0;
-
                 imageElement.src = newImageSrc;
 
                 function fadeIn() {
                     let opacity = 0;
                     const fadeInInterval = setInterval(() => {
-                        opacity += 0.05;
-                        imageElement.style.opacity = opacity.toFixed(2);
+                        opacity += 0.5;
+                        imageElement.style.opacity = opacity.toFixed(1);
                         if (opacity >= 1) {
                             clearInterval(fadeInInterval);
                         }
                     }, 50);
                 }
-                setTimeout(fadeIn, 100);
+                setTimeout(fadeIn, 50);
             }
 
             setTimeout(() => {
@@ -243,10 +239,13 @@ window.onload = function () {
     </script>
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
     <script src="../../index.js"></script>
+    <script src="../../main1.js"></script>
+    <script type="module" src="../../main.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
