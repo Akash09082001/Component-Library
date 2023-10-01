@@ -26,3 +26,21 @@ function toggleContent(contentType) {
 };
 
 
+function copyToClipBoard(){
+    let htmlCode = document.getElementById("htmlCode").innerText;
+    let javascriptCode = document.getElementById("javascriptCode").innerText;
+    let copyHtml = document.getElementById("copyHtml");
+    let copyJavascript = document.getElementById("copyJavascript");
+
+    copyHtml.onclick = function(){
+        navigator.clipboard.writeText(htmlCode).then(()=>{
+            (true)? alert('HTML Code Coppied succesfully') : alert('HTML Code Could Not copied');
+        });
+    }
+    copyJavascript.onclick = function(){
+        navigator.clipboard.writeText(javascriptCode).then(()=>{
+            (true)? alert('Javascript Code Coppied succesfully') : alert('Javascript Code Could Not copied');
+        });
+    }
+}
+
