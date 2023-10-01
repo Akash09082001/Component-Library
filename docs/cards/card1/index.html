@@ -125,11 +125,14 @@
                                     </div>
                                 </div>
                                 <div id="htmlContent"
-                                    class="hidden flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
+                                    class="hidden flex-col relative gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="HTML content">
+                                    <div class="flex w-fit absolute top-7 right-10">
+                                        <button id="copyHtml" onclick="copyToClipBoard()" class="flex px-4 py-1 bg-white text-indigo-400 rounded-md">Copy</button>
+                                    </div>
                                     <div class="flex h-full w-full">
                                         <pre class="flex w-full">
-                                                <code class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
+                                                <code id="htmlCode" class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
     &lt;div class=&quot;flex h-screen items-center justify-center bg-black&quot;&gt;
       &lt;div class=&quot;flex h-auto w-80 overflow-hidden&quot; id=&quot;image-container&quot;&gt;
         &lt;img src=&quot;https://img.freepik.com/free-photo/colleagues-making-business-plan-meeting_176420-5103.jpg?t=st=1694589480~exp=1694590080~hmac=8246fe79fe0f53697b1615d603d6446961866b905a18d0d794620c3db9e077f8&quot; alt=&quot;&quot; class=&quot;rounded-6 h-full w-full object-contain&quot; /&gt;
@@ -140,11 +143,14 @@
                                     </div>
                                 </div>
                                 <div id="javascriptContent"
-                                    class="hidden flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
+                                    class="hidden relative flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="Javascript content">
+                                    <div class="flex w-fit absolute top-7 right-10">
+                                        <button id="copyJavascript" onclick="copyToClipBoard()" class="flex px-4 py-1 bg-white text-indigo-400 rounded-md">Copy</button>
+                                    </div>
                                     <div class="flex w-full overflow-scroll card-scroll1">
                                         <pre class="flex w-full">
-                                                <code class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
+                                                <code id="javascriptCode" class="card-scroll1 rounded-md py-5 flex w-full overflow-scroll">
     window.onload = function () {
       const imageContainer = document.getElementById("image-container");
       const imageElement = imageContainer.querySelector("img");
