@@ -13,8 +13,5 @@ node_modules/
 # Ignore npm's cache
 .npm/
 
-# Ignore any build output
-src/
-
 # Ignore yarn's lock file
 yarn.lock

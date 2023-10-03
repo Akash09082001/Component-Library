@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card-scroll::-webkit-scrollbar {
+    @apply h-1 w-2;
+}
+.card-scroll1::-webkit-scrollbar {
+    @apply w-2 h-2;
+}
+
+.card-scroll::-webkit-scrollbar-track ,
+.card-scroll1::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+.card-scroll::-webkit-scrollbar-thumb,
+.card-scroll1::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #c7d2fe;
+}
+
+details[open] summary {
+    transition: height 150ms ease-in-out;
+    list-style-type: none;
+}
+
+details > summary {
+    list-style-type: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details  summary ion-icon {
+    transform: rotate(0deg);
+}
+
+details[open]  summary ion-icon {
+    transform: rotate(180deg);
+}
+.button_hover{
+    background: #c7d2fe;
+    color: black;
+}
