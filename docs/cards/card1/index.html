@@ -127,8 +127,11 @@
                                 <div id="htmlContent"
                                     class="hidden flex-col relative gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="HTML content">
+                                    <div class="flex absolute w-full  bottom-20 inset-x-0 items-center justify-center">
+                                        <span id="htmlSpan" class="hidden w-fit bg-indigo-300  py-2 px-5 font-bold text-white rounded-md"></span>
+                                    </div>
                                     <div class="flex w-fit absolute top-7 right-10">
-                                        <button id="copyHtml" onclick="copyToClipBoard()" class="flex px-4 py-1 bg-white text-indigo-400 rounded-md">Copy</button>
+                                        <button id="copyHtml" onclick="copyToClipBoard()" class="flex px-4 py-1 w-fit bg-white  text-indigo-400 rounded-md">Copy</button>
                                     </div>
                                     <div class="flex h-full w-full">
                                         <pre class="flex w-full">
@@ -145,6 +148,9 @@
                                 <div id="javascriptContent"
                                     class="hidden relative flex-col gap-5 max-h-[605px] h-screen w-full border border-gray-200 rounded-md py-5 px-5"
                                     aria-content="Javascript content">
+                                    <div class="flex absolute w-full  bottom-20 inset-x-0 items-center justify-center">
+                                        <span id="javascriptSpan" class="hidden w-fit bg-indigo-300  py-2 px-5 font-bold text-white rounded-md"></span>
+                                    </div>
                                     <div class="flex w-fit absolute top-7 right-10">
                                         <button id="copyJavascript" onclick="copyToClipBoard()" class="flex px-4 py-1 bg-white text-indigo-400 rounded-md">Copy</button>
                                     </div>
