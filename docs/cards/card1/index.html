@@ -255,6 +255,21 @@
 
     </script>
 
+<script>
+    // Function to perform a hard refresh
+    function hardRefresh() {
+        location.reload(true);
+    }
+
+    // Check if the website has been visited before
+    if (!localStorage.getItem('visited')) {
+        // Set a flag in localStorage to indicate that the website has been visited
+        localStorage.setItem('visited', 'true');
+        // Call the hardRefresh function only on the first visit
+        window.addEventListener('load', hardRefresh);
+    }
+    </script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
